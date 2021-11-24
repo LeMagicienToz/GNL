@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/17 15:52:00 by muteza            #+#    #+#             */
-/*   Updated: 2021/11/24 09:59:21 by muteza           ###   ########.fr       */
+/*   Updated: 2021/11/24 17:47:36 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,24 +106,26 @@ char	*reroll_buff(char *buff, int len_line)
 char	*get_line(char *buff)
 {
 	char	*str;
-	char	*buff_tmp;
+	char	*str_tmp;
 	int		i;
 
-	//buff_tmp = malloc(BUFF_SIZE);
-	buff_tmp = buff;
+	str = malloc(BUFF_SIZE);
+	//buff_tmp = buff;
 	//printf(buff);
 	i = 0;
-	str = malloc(BUFF_SIZE);
-	while (buff_tmp[i] != '\0' && buff_tmp[i] != '\n')
+	//str = malloc(BUFF_SIZE);
+	while (buff[i] != '\0' && buff[i] != '\n')
 	{
-		printf("%c", str[i]);
-		str[i] = buff_tmp[i];
+		//printf("%c", str[i]);
+		str[i] = buff[i];
 		++i;
 	}
-	printf("%s", str);
-	return (str);
+	str_tmp = str;
+	free(str);
+	//printf("%s", buff);
+	return (str_tmp);
 }
-
+/*
 int	main(void)
 {
 	int	fd;
@@ -135,3 +137,4 @@ int	main(void)
 	//get_next_line(fd);
 	//printf("%s", get_next_line(fd));
 }
+*/
