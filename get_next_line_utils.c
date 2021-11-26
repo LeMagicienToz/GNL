@@ -6,7 +6,7 @@
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/12 11:01:37 by muteza            #+#    #+#             */
-/*   Updated: 2021/11/22 12:06:00 by muteza           ###   ########.fr       */
+/*   Updated: 2021/11/26 18:44:58 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,7 +50,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	int		lens1;
 	int		lens2;
 	char	*str;
-
+	//printf("aa");
 	if (s1 && s2)
 	{
 		lens1 = ft_strlen((char *)s1);
@@ -72,16 +72,31 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	}
 	return (NULL);
 }
-
+/*
 int	ft_strchr(const char *s, int c)
 {
 	size_t	i;
 
 	if (c == 0)
 		return (0);
+	i = 0;
+	while (s[i++] && c != 0)
+		if (s[i] == (char)c)
+			return (i);
+	//printf("ret 0");
+	return (-1);
+}
+*/
+
+char	*ft_strchr(const char *s, int c)
+{
+	size_t	i;
+
+	if (c == 0)
+		return ((char *) s + ft_strlen((char *)s));
 	i = -1;
 	while (s[++i] && c != 0)
 		if (s[i] == (char)c)
-			return (i);
-	return (0);
+			return ((char *)(s + i));
+	return (NULL);
 }
