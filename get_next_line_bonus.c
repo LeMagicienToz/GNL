@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line.c                                    :+:      :+:    :+:   */
+/*   get_next_line_bonus.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/17 15:52:00 by muteza            #+#    #+#             */
-/*   Updated: 2021/11/30 18:54:14 by muteza           ###   ########.fr       */
+/*   Created: 2021/11/30 17:25:44 by muteza            #+#    #+#             */
+/*   Updated: 2021/11/30 19:10:31 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 #include <fcntl.h>
 
 char	*get_next_line(int fd)
@@ -100,12 +100,3 @@ char	*get_line(char *save, int fd)
 	free(buff);
 	return (save);
 }
-/*
-int	main(void)
-{
-	int	fd;
-
-	fd = open("abc.txt", O_RDONLY);
-	printf("%s", get_next_line(fd));
-}
-*/

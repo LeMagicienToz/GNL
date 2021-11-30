@@ -1,16 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   get_next_line_utils.c                              :+:      :+:    :+:   */
+/*   get_next_line_utils_bonus.c                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: muteza <muteza@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/12 11:01:37 by muteza            #+#    #+#             */
-/*   Updated: 2021/11/30 17:27:41 by muteza           ###   ########.fr       */
+/*   Created: 2021/11/30 17:26:54 by muteza            #+#    #+#             */
+/*   Updated: 2021/11/30 19:10:24 by muteza           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include "get_next_line_bonus.h"
 #include <fcntl.h>
 
 char	*ft_strdup(const char *s1)
